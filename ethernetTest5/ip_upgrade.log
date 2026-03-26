@@ -1,0 +1,16 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
+| Date         : Thu Feb 26 13:15:47 2026
+| Host         : DESKTOP-4RVJPC8 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7a100tcsg324-1
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'eth_axis_gpio_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of eth_axis_gpio_0_0 (fpgasforbeginners:toolbox:axis_gpio:2.0) from (Rev. 2) to (Rev. 3)
+

@@ -1,0 +1,43 @@
+verilog fifo_generator_v13_2_10 --include "../../../../ethernetTest5.gen/sources_1/bd/eth/ipshared/3242" --include "../../../../ethernetTest5.gen/sources_1/bd/eth/ip/eth_axis_gpio_0_0/src/axis_data_fifo_tuser/hdl" \
+"../../../../ethernetTest5.gen/sources_1/bd/eth/ip/eth_rmii_axis_0_0/src/data_fifo/simulation/fifo_generator_vlog_beh.v" \
+"../../../../ethernetTest5.gen/sources_1/bd/eth/ip/eth_rmii_axis_0_0/src/data_fifo/hdl/fifo_generator_v13_2_rfs.v" \
+
+verilog xil_defaultlib --include "../../../../ethernetTest5.gen/sources_1/bd/eth/ipshared/3242" --include "../../../../ethernetTest5.gen/sources_1/bd/eth/ip/eth_axis_gpio_0_0/src/axis_data_fifo_tuser/hdl" \
+"../../../bd/eth/ip/eth_rmii_axis_0_0/src/data_fifo/sim/data_fifo.v" \
+
+sv xil_defaultlib --include "../../../../ethernetTest5.gen/sources_1/bd/eth/ipshared/3242" --include "../../../../ethernetTest5.gen/sources_1/bd/eth/ip/eth_axis_gpio_0_0/src/axis_data_fifo_tuser/hdl" \
+"../../../bd/eth/ipshared/b3b3/src/crc_gen.sv" \
+"../../../bd/eth/ipshared/b3b3/src/eth_header_gen.sv" \
+"../../../bd/eth/ipshared/b3b3/src/packet_gen.sv" \
+"../../../bd/eth/ipshared/b3b3/src/packet_recv.sv" \
+
+verilog xil_defaultlib --include "../../../../ethernetTest5.gen/sources_1/bd/eth/ipshared/3242" --include "../../../../ethernetTest5.gen/sources_1/bd/eth/ip/eth_axis_gpio_0_0/src/axis_data_fifo_tuser/hdl" \
+"../../../bd/eth/ipshared/b3b3/src/rmii_axis_v1_0.v" \
+"../../../bd/eth/ip/eth_rmii_axis_0_0/sim/eth_rmii_axis_0_0.v" \
+"../../../bd/eth/ip/eth_clk_wiz_0_0/eth_clk_wiz_0_0_clk_wiz.v" \
+"../../../bd/eth/ip/eth_clk_wiz_0_0/eth_clk_wiz_0_0.v" \
+
+verilog axis_infrastructure_v1_1_1 --include "../../../../ethernetTest5.gen/sources_1/bd/eth/ipshared/3242" --include "../../../../ethernetTest5.gen/sources_1/bd/eth/ip/eth_axis_gpio_0_0/src/axis_data_fifo_tuser/hdl" \
+"../../../../ethernetTest5.gen/sources_1/bd/eth/ip/eth_axis_gpio_0_0/src/axis_data_fifo_tuser/hdl/axis_infrastructure_v1_1_vl_rfs.v" \
+
+verilog axis_data_fifo_v2_0_13 --include "../../../../ethernetTest5.gen/sources_1/bd/eth/ipshared/3242" --include "../../../../ethernetTest5.gen/sources_1/bd/eth/ip/eth_axis_gpio_0_0/src/axis_data_fifo_tuser/hdl" \
+"../../../../ethernetTest5.gen/sources_1/bd/eth/ip/eth_axis_gpio_0_0/src/axis_data_fifo_tuser/hdl/axis_data_fifo_v2_0_vl_rfs.v" \
+
+verilog xil_defaultlib --include "../../../../ethernetTest5.gen/sources_1/bd/eth/ipshared/3242" --include "../../../../ethernetTest5.gen/sources_1/bd/eth/ip/eth_axis_gpio_0_0/src/axis_data_fifo_tuser/hdl" \
+"../../../bd/eth/ip/eth_axis_gpio_0_0/src/axis_data_fifo_tuser/sim/axis_data_fifo_tuser.v" \
+
+sv xil_defaultlib --include "../../../../ethernetTest5.gen/sources_1/bd/eth/ipshared/3242" --include "../../../../ethernetTest5.gen/sources_1/bd/eth/ip/eth_axis_gpio_0_0/src/axis_data_fifo_tuser/hdl" \
+"../../../bd/eth/ipshared/099f/src/axis_gpio.sv" \
+"../../../bd/eth/ipshared/099f/src/sw_axis.sv" \
+"../../../bd/eth/ipshared/099f/src/debounce.sv" \
+
+verilog xil_defaultlib --include "../../../../ethernetTest5.gen/sources_1/bd/eth/ipshared/3242" --include "../../../../ethernetTest5.gen/sources_1/bd/eth/ip/eth_axis_gpio_0_0/src/axis_data_fifo_tuser/hdl" \
+"../../../bd/eth/ipshared/099f/src/axis_gpio_v1_0.v" \
+"../../../bd/eth/ip/eth_axis_gpio_0_0/sim/eth_axis_gpio_0_0.v" \
+"../../../bd/eth/ip/eth_tempSens_0_1/sim/eth_tempSens_0_1.v" \
+"../../../bd/eth/sim/eth.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

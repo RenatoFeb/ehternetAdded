@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Thu Feb 26 14:01:46 2026
+# Process ID: 21120
+# Current directory: C:/Users/rfebb/Desktop/Projects/ethernetTest5/ethernetTest5.runs/synth_1
+# Command line: vivado.exe -log eth_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source eth_wrapper.tcl
+# Log file: C:/Users/rfebb/Desktop/Projects/ethernetTest5/ethernetTest5.runs/synth_1/eth_wrapper.vds
+# Journal file: C:/Users/rfebb/Desktop/Projects/ethernetTest5/ethernetTest5.runs/synth_1\vivado.jou
+# Running On        :DESKTOP-4RVJPC8
+# Platform          :Windows Server 2016 or Windows 10
+# Operating System  :19045
+# Processor Detail  :Intel(R) Core(TM) i5-10400F CPU @ 2.90GHz
+# CPU Frequency     :2904 MHz
+# CPU Physical cores:6
+# CPU Logical cores :12
+# Host memory       :17099 MB
+# Swap memory       :5637 MB
+# Total Virtual     :22736 MB
+# Available Virtual :4902 MB
+#-----------------------------------------------------------
+source eth_wrapper.tcl -notrace

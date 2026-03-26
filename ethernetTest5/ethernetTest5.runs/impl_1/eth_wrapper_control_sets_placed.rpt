@@ -1,0 +1,122 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
+| Date         : Thu Feb 26 14:03:33 2026
+| Host         : DESKTOP-4RVJPC8 running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file eth_wrapper_control_sets_placed.rpt
+| Design       : eth_wrapper
+| Device       : xc7a100t
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    44 |
+|    Minimum number of control sets                        |    44 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |   107 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    44 |
+| >= 0 to < 4        |     2 |
+| >= 4 to < 6        |     3 |
+| >= 6 to < 8        |     2 |
+| >= 8 to < 10       |     7 |
+| >= 10 to < 12      |     1 |
+| >= 12 to < 14      |     4 |
+| >= 14 to < 16      |     0 |
+| >= 16              |    25 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              62 |           35 |
+| No           | No                    | Yes                    |              17 |            4 |
+| No           | Yes                   | No                     |             423 |          111 |
+| Yes          | No                    | No                     |              72 |           17 |
+| Yes          | No                    | Yes                    |              37 |           12 |
+| Yes          | Yes                   | No                     |             954 |          175 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++-------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------+------------------+----------------+--------------+
+|                Clock Signal               |                                                                             Enable Signal                                                                            |                                                          Set/Reset Signal                                                         | Slice Load Count | Bel Load Count | Bels / Slice |
++-------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------+------------------+----------------+--------------+
+|  CLK100MHZ_IBUF                           |                                                                                                                                                                      |                                                                                                                                   |                1 |              1 |         1.00 |
+|  eth_i/clk_wiz_0/inst/clk_out1            |                                                                                                                                                                      | eth_i/axis_gpio_0/inst/sw_axis_i/axis_data_fifo_tuser/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/xpm_fifo_rst_inst/rst_i |                1 |              3 |         3.00 |
+|  eth_i/clk_wiz_0/inst/clk_out1            |                                                                                                                                                                      | eth_i/proc_sys_reset_0/U0/EXT_LPF/lpf_int                                                                                         |                2 |              4 |         2.00 |
+|  eth_i/clk_wiz_0/inst/clk_out1            | eth_i/axis_gpio_0/inst/sw_axis_i/postfix_buffer[66]_i_2_n_0                                                                                                          |                                                                                                                                   |                1 |              4 |         4.00 |
+|  eth_i/tempSens_0/inst/cgen/w_200kHz_BUFG | eth_i/tempSens_0/inst/master/FSM_sequential_state_reg_reg[4]_i_1_n_0                                                                                                 | reset_IBUF                                                                                                                        |                2 |              5 |         2.50 |
+|  eth_i/clk_wiz_0/inst/clk_out1            | eth_i/proc_sys_reset_0/U0/SEQ/seq_cnt_en                                                                                                                             | eth_i/proc_sys_reset_0/U0/SEQ/SEQ_COUNTER/clear                                                                                   |                1 |              6 |         6.00 |
+|  eth_i/clk_wiz_0/inst/clk_out1            | eth_i/rmii_axis_0/inst/packet_gen_i/sfd_buffer[7]_i_2_n_0                                                                                                            | eth_i/rmii_axis_0/inst/packet_gen_i/sfd_buffer[7]_i_1_n_0                                                                         |                3 |              7 |         2.33 |
+|  eth_i/tempSens_0/inst/cgen/w_200kHz_BUFG | eth_i/tempSens_0/inst/master/temp_data_reg                                                                                                                           |                                                                                                                                   |                1 |              8 |         8.00 |
+|  eth_i/clk_wiz_0/inst/clk_out1            | eth_i/axis_gpio_0/inst/sw_axis_i/prefix_buffer[136]_i_2_n_0                                                                                                          |                                                                                                                                   |                1 |              8 |         8.00 |
+|  eth_i/clk_wiz_0/inst/clk_out1            | eth_i/rmii_axis_0/inst/packet_recv_i/data_buffer                                                                                                                     | eth_i/rmii_axis_0/inst/packet_recv_i/data_buffer[7]_i_1__0_n_0                                                                    |                2 |              8 |         4.00 |
+|  eth_i/clk_wiz_0/inst/clk_out1            | eth_i/rmii_axis_0/inst/packet_gen_i/data_buffer                                                                                                                      |                                                                                                                                   |                1 |              8 |         8.00 |
+|  eth_i/clk_wiz_0/inst/clk_out1            | eth_i/rmii_axis_0/inst/packet_gen_i/data_fifo_i/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.curr_fwft_state_reg[1]_0[0] | eth_i/rmii_axis_0/inst/packet_gen_i/TX_EN_i_1_n_0                                                                                 |                5 |              8 |         1.60 |
+|  CLK100MHZ_IBUF                           |                                                                                                                                                                      | eth_i/tempSens_0/inst/cgen/clk_reg                                                                                                |                2 |              8 |         4.00 |
+|  eth_i/tempSens_0/inst/cgen/w_200kHz_BUFG |                                                                                                                                                                      |                                                                                                                                   |                6 |              9 |         1.50 |
+|  eth_i/clk_wiz_0/inst/clk_out1            |                                                                                                                                                                      | eth_i/rmii_axis_0/inst/packet_recv_i/data_buffer[7]_i_1__0_n_0                                                                    |                3 |             11 |         3.67 |
+|  eth_i/clk_wiz_0/inst/clk_out1            | eth_i/axis_gpio_0/inst/sw_axis_i/axis_data_fifo_tuser/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/xpm_fifo_rst_inst/ram_wr_en_pf                             | eth_i/axis_gpio_0/inst/sw_axis_i/axis_data_fifo_tuser/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/xpm_fifo_rst_inst/Q[0]  |                3 |             12 |         4.00 |
+|  eth_i/clk_wiz_0/inst/clk_out1            | eth_i/rmii_axis_0/inst/packet_recv_i/header_buffer                                                                                                                   |                                                                                                                                   |                4 |             12 |         3.00 |
+|  eth_i/clk_wiz_0/inst/clk_out1            | eth_i/axis_gpio_0/inst/sw_axis_i/axis_data_fifo_tuser/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/rdp_inst/FSM_sequential_gen_fwft.curr_fwft_state_reg[1]    | eth_i/axis_gpio_0/inst/sw_axis_i/axis_data_fifo_tuser/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/xpm_fifo_rst_inst/Q[0]  |                3 |             12 |         4.00 |
+|  eth_i/clk_wiz_0/inst/clk_out1            | eth_i/rmii_axis_0/inst/packet_gen_i/data_fifo_i/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/cntr_en                                      | eth_i/rmii_axis_0/inst/packet_gen_i/TX_EN_i_1_n_0                                                                                 |                3 |             12 |         4.00 |
+|  eth_i/clk_wiz_0/inst/clk_out1            | eth_i/proc_sys_reset_0/U0/peripheral_aresetn[0]                                                                                                                      |                                                                                                                                   |                4 |             16 |         4.00 |
+|  eth_i/clk_wiz_0/inst/clk_out1            |                                                                                                                                                                      | eth_i/axis_gpio_0/inst/sw_axis_i/axis_data_fifo_tuser/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/xpm_fifo_rst_inst/Q[0]  |                5 |             16 |         3.20 |
+|  eth_i/tempSens_0/inst/cgen/w_200kHz_BUFG |                                                                                                                                                                      | reset_IBUF                                                                                                                        |                4 |             17 |         4.25 |
+|  eth_i/clk_wiz_0/inst/clk_out1            |                                                                                                                                                                      | eth_i/rmii_axis_0/inst/packet_gen_i/TX_EN_i_1_n_0                                                                                 |                9 |             18 |         2.00 |
+|  eth_i/clk_wiz_0/inst/clk_out1            | eth_i/rmii_axis_0/inst/packet_gen_i/data_fifo_i/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/E[0]                                 | eth_i/rmii_axis_0/inst/packet_gen_i/TX_EN_i_1_n_0                                                                                 |                5 |             22 |         4.40 |
+|  eth_i/clk_wiz_0/inst/clk_out1            | eth_i/rmii_axis_0/inst/packet_gen_i/data_fifo_i/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_fb_i_reg_0[0]                       | eth_i/rmii_axis_0/inst/packet_gen_i/TX_EN_i_1_n_0                                                                                 |                4 |             22 |         5.50 |
+|  eth_i/clk_wiz_0/inst/clk_out1            |                                                                                                                                                                      | eth_i/axis_gpio_0/inst/sw_axis_i/timer[0]_i_1_n_0                                                                                 |                6 |             23 |         3.83 |
+|  eth_i/clk_wiz_0/inst/clk_out1            | eth_i/axis_gpio_0/inst/sw_axis_i/data_buffer                                                                                                                         | eth_i/axis_gpio_0/inst/sw_axis_i/debounce_i/SR[0]                                                                                 |                7 |             24 |         3.43 |
+|  eth_i/clk_wiz_0/inst/clk_out1            | eth_i/axis_gpio_0/inst/axis_gpio_i/led_buffer0                                                                                                                       | eth_i/axis_gpio_0/inst/axis_gpio_i/led_buffer[15]_i_1_n_0                                                                         |                5 |             24 |         4.80 |
+|  eth_i/clk_wiz_0/inst/clk_out1            | eth_i/rmii_axis_0/inst/packet_gen_i/preamble_buffer[54]_i_1_n_0                                                                                                      | eth_i/rmii_axis_0/inst/packet_gen_i/TX_EN_i_1_n_0                                                                                 |                5 |             28 |         5.60 |
+|  eth_i/clk_wiz_0/inst/clk_out1            | eth_i/axis_gpio_0/inst/sw_axis_i/postfix_buffer[66]_i_2_n_0                                                                                                          | eth_i/axis_gpio_0/inst/sw_axis_i/postfix_buffer[66]_i_1_n_0                                                                       |                7 |             28 |         4.00 |
+|  eth_i/clk_wiz_0/inst/clk_out1            | eth_i/axis_gpio_0/inst/sw_axis_i/postfix_buffer[62]_i_1_n_0                                                                                                          | eth_i/axis_gpio_0/inst/sw_axis_i/debounce_i/SR[0]                                                                                 |                9 |             29 |         3.22 |
+|  eth_i/clk_wiz_0/inst/clk_out1            | eth_i/rmii_axis_0/inst/packet_recv_i/m00_axis_tvalid                                                                                                                 | eth_i/axis_gpio_0/inst/axis_gpio_i/axi_counter[0]_i_1_n_0                                                                         |                8 |             32 |         4.00 |
+|  eth_i/clk_wiz_0/inst/clk_out1            |                                                                                                                                                                      | eth_i/rmii_axis_0/inst/packet_gen_i/state_counter[0]_i_1_n_0                                                                      |                8 |             32 |         4.00 |
+|  eth_i/clk_wiz_0/inst/clk_out1            |                                                                                                                                                                      | eth_i/rmii_axis_0/inst/packet_recv_i/state_counter[0]_i_1__0_n_0                                                                  |                8 |             32 |         4.00 |
+|  eth_i/clk_wiz_0/inst/clk_out1            | eth_i/rmii_axis_0/inst/packet_gen_i/fcs_buffer[31]_i_1_n_0                                                                                                           |                                                                                                                                   |                7 |             32 |         4.57 |
+|  eth_i/clk_wiz_0/inst/clk_out1            |                                                                                                                                                                      | eth_i/axis_gpio_0/inst/sw_axis_i/state_counter[0]_i_1_n_0                                                                         |                8 |             32 |         4.00 |
+|  eth_i/clk_wiz_0/inst/clk_out1            | eth_i/rmii_axis_0/inst/packet_gen_i/crc_gen_i/lfsr_q[31]_i_1_n_0                                                                                                     | eth_i/rmii_axis_0/inst/packet_gen_i/crc_gen_i/lfsr_q[31]_i_3_n_0                                                                  |               10 |             32 |         3.20 |
+|  eth_i/clk_wiz_0/inst/clk_out1            | eth_i/axis_gpio_0/inst/sw_axis_i/prefix_buffer[136]_i_2_n_0                                                                                                          | eth_i/axis_gpio_0/inst/sw_axis_i/prefix_buffer[136]_i_1_n_0                                                                       |                7 |             48 |         6.86 |
+|  eth_i/clk_wiz_0/inst/clk_out1            |                                                                                                                                                                      |                                                                                                                                   |               29 |             53 |         1.83 |
+|  eth_i/clk_wiz_0/inst/clk_out1            | eth_i/axis_gpio_0/inst/sw_axis_i/prefix_buffer[150]_i_1_n_0                                                                                                          | eth_i/axis_gpio_0/inst/sw_axis_i/debounce_i/SR[0]                                                                                 |                8 |             61 |         7.62 |
+|  eth_i/clk_wiz_0/inst/clk_out1            | eth_i/rmii_axis_0/inst/packet_recv_i/preamble_sfd_buffer                                                                                                             | eth_i/rmii_axis_0/inst/packet_recv_i/data_buffer[7]_i_1__0_n_0                                                                    |               14 |             62 |         4.43 |
+|  eth_i/clk_wiz_0/inst/clk_out1            | eth_i/rmii_axis_0/inst/packet_recv_i/header_buffer                                                                                                                   | eth_i/rmii_axis_0/inst/packet_recv_i/data_buffer[7]_i_1__0_n_0                                                                    |               31 |            192 |         6.19 |
+|  eth_i/clk_wiz_0/inst/clk_out1            |                                                                                                                                                                      | eth_i/axis_gpio_0/inst/sw_axis_i/debounce_i/SR[0]                                                                                 |               59 |            244 |         4.14 |
+|  eth_i/clk_wiz_0/inst/clk_out1            | eth_i/rmii_axis_0/inst/packet_gen_i/header_buffer[319]_i_1_n_0                                                                                                       | eth_i/rmii_axis_0/inst/packet_gen_i/TX_EN_i_1_n_0                                                                                 |               45 |            317 |         7.04 |
++-------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------+------------------+----------------+--------------+
+
+

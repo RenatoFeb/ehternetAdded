@@ -1,0 +1,8 @@
+vhdl fifo_generator_v13_2_10  \
+"../../../../ethernetTest5.gen/sources_1/bd/eth/ip/eth_rmii_axis_0_0/src/data_fifo/hdl/fifo_generator_v13_2_rfs.vhd" \
+
+vhdl xil_defaultlib  \
+"../../../bd/eth/ip/eth_proc_sys_reset_0_0/sim/eth_proc_sys_reset_0_0.vhd" \
+
+# Do not sort compile order
+nosort

@@ -1,0 +1,1 @@
+vopt -l elaborate.log +acc=npr -suppress 10016  -L xil_defaultlib -L xpm -L fifo_generator_v13_2_10 -L lib_cdc_v1_0_3 -L proc_sys_reset_v5_0_15 -L axis_infrastructure_v1_1_1 -L axis_data_fifo_v2_0_13 -L unisims_ver -L unimacro_ver -L secureip -work xil_defaultlib xil_defaultlib.eth xil_defaultlib.glbl -o eth_opt

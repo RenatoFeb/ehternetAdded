@@ -1,0 +1,391 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0xAB3C13ED6AD48C3D",
+      "device": "xc7a100tcsg324-1",
+      "gen_directory": "../../../../ethernetTest5.gen/sources_1/bd/eth",
+      "name": "eth",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2024.1",
+      "validated": "true"
+    },
+    "design_tree": {
+      "rmii_axis_0": "",
+      "proc_sys_reset_0": "",
+      "clk_wiz_0": "",
+      "axis_gpio_0": "",
+      "tempSens_0": ""
+    },
+    "ports": {
+      "ETH_TXEN": {
+        "direction": "O"
+      },
+      "ETH_TXD": {
+        "direction": "O",
+        "left": "1",
+        "right": "0"
+      },
+      "ETH_CRSDV": {
+        "direction": "I"
+      },
+      "ETH_RXERR": {
+        "direction": "I"
+      },
+      "ETH_RXD": {
+        "direction": "I",
+        "left": "1",
+        "right": "0"
+      },
+      "CLK100MHZ": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "ASSOCIATED_RESET": {
+            "value": "reset"
+          },
+          "CLK_DOMAIN": {
+            "value": "eth_CLK100MHZ",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          }
+        }
+      },
+      "ETH_REFCLK": {
+        "type": "clk",
+        "direction": "O",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "/clk_wiz_0_clk_out1",
+            "value_src": "ip_prop"
+          },
+          "FREQ_HZ": {
+            "value": "50000000",
+            "value_src": "ip_prop"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "45.0",
+            "value_src": "ip_prop"
+          }
+        }
+      },
+      "RESET_N": {
+        "type": "rst",
+        "direction": "I",
+        "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "POLARITY": {
+            "value": "ACTIVE_LOW",
+            "value_src": "default"
+          }
+        }
+      },
+      "LED": {
+        "direction": "O",
+        "left": "15",
+        "right": "0"
+      },
+      "reset": {
+        "type": "rst",
+        "direction": "I",
+        "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "POLARITY": {
+            "value": "ACTIVE_LOW"
+          }
+        }
+      },
+      "TMP_SCL": {
+        "direction": "O"
+      },
+      "TMP_SDA": {
+        "direction": "IO"
+      },
+      "SW": {
+        "direction": "I",
+        "left": "7",
+        "right": "0"
+      }
+    },
+    "components": {
+      "rmii_axis_0": {
+        "vlnv": "fpgasforbeginners:toolbox:rmii_axis:1.0",
+        "ip_revision": "1",
+        "xci_name": "eth_rmii_axis_0_0",
+        "xci_path": "ip\\eth_rmii_axis_0_0\\eth_rmii_axis_0_0.xci",
+        "inst_hier_path": "rmii_axis_0"
+      },
+      "proc_sys_reset_0": {
+        "vlnv": "xilinx.com:ip:proc_sys_reset:5.0",
+        "ip_revision": "15",
+        "xci_name": "eth_proc_sys_reset_0_0",
+        "xci_path": "ip\\eth_proc_sys_reset_0_0\\eth_proc_sys_reset_0_0.xci",
+        "inst_hier_path": "proc_sys_reset_0"
+      },
+      "clk_wiz_0": {
+        "vlnv": "xilinx.com:ip:clk_wiz:6.0",
+        "ip_revision": "14",
+        "xci_name": "eth_clk_wiz_0_0",
+        "xci_path": "ip\\eth_clk_wiz_0_0\\eth_clk_wiz_0_0.xci",
+        "inst_hier_path": "clk_wiz_0",
+        "parameters": {
+          "CLKOUT1_JITTER": {
+            "value": "151.636"
+          },
+          "CLKOUT1_REQUESTED_OUT_FREQ": {
+            "value": "50"
+          },
+          "CLKOUT2_JITTER": {
+            "value": "151.636"
+          },
+          "CLKOUT2_PHASE_ERROR": {
+            "value": "98.575"
+          },
+          "CLKOUT2_REQUESTED_OUT_FREQ": {
+            "value": "50"
+          },
+          "CLKOUT2_REQUESTED_PHASE": {
+            "value": "45.000"
+          },
+          "CLKOUT2_USED": {
+            "value": "true"
+          },
+          "MMCM_CLKOUT0_DIVIDE_F": {
+            "value": "20.000"
+          },
+          "MMCM_CLKOUT1_DIVIDE": {
+            "value": "20"
+          },
+          "MMCM_CLKOUT1_PHASE": {
+            "value": "45.000"
+          },
+          "NUM_OUT_CLKS": {
+            "value": "2"
+          },
+          "USE_RESET": {
+            "value": "false"
+          }
+        }
+      },
+      "axis_gpio_0": {
+        "vlnv": "fpgasforbeginners:toolbox:axis_gpio:2.0",
+        "ip_revision": "3",
+        "xci_name": "eth_axis_gpio_0_0",
+        "xci_path": "ip\\eth_axis_gpio_0_0\\eth_axis_gpio_0_0.xci",
+        "inst_hier_path": "axis_gpio_0"
+      },
+      "tempSens_0": {
+        "vlnv": "xilinx.com:module_ref:tempSens:1.0",
+        "ip_revision": "1",
+        "xci_name": "eth_tempSens_0_1",
+        "xci_path": "ip\\eth_tempSens_0_1\\eth_tempSens_0_1.xci",
+        "inst_hier_path": "tempSens_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "tempSens",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "CLK100MHZ": {
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "default_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "default_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "eth_CLK100MHZ",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "reset": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "user_prop"
+              }
+            }
+          },
+          "TMP_SDA": {
+            "direction": "IO"
+          },
+          "TMP_SCL": {
+            "direction": "O"
+          },
+          "SW": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "w_data": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          }
+        }
+      }
+    },
+    "interface_nets": {
+      "axis_gpio_0_M00_AXIS": {
+        "interface_ports": [
+          "rmii_axis_0/S00_AXIS",
+          "axis_gpio_0/M00_AXIS"
+        ]
+      },
+      "rmii_axis_0_M00_AXIS": {
+        "interface_ports": [
+          "rmii_axis_0/M00_AXIS",
+          "axis_gpio_0/S00_AXIS"
+        ]
+      }
+    },
+    "nets": {
+      "ETH_CRSDV_0_1": {
+        "ports": [
+          "ETH_CRSDV",
+          "rmii_axis_0/ETH_CRSDV"
+        ]
+      },
+      "ETH_RXD_0_1": {
+        "ports": [
+          "ETH_RXD",
+          "rmii_axis_0/ETH_RXD"
+        ]
+      },
+      "ETH_RXERR_0_1": {
+        "ports": [
+          "ETH_RXERR",
+          "rmii_axis_0/ETH_RXERR"
+        ]
+      },
+      "Net": {
+        "ports": [
+          "TMP_SDA",
+          "tempSens_0/TMP_SDA"
+        ]
+      },
+      "SW_0_1": {
+        "ports": [
+          "SW",
+          "tempSens_0/SW"
+        ]
+      },
+      "axis_gpio_0_LED": {
+        "ports": [
+          "axis_gpio_0/LED",
+          "LED"
+        ]
+      },
+      "clk_in1_0_1": {
+        "ports": [
+          "CLK100MHZ",
+          "clk_wiz_0/clk_in1",
+          "tempSens_0/CLK100MHZ"
+        ]
+      },
+      "clk_wiz_0_clk_out1": {
+        "ports": [
+          "clk_wiz_0/clk_out1",
+          "rmii_axis_0/s00_axis_aclk",
+          "rmii_axis_0/m00_axis_aclk",
+          "proc_sys_reset_0/slowest_sync_clk",
+          "axis_gpio_0/s00_axis_aclk",
+          "axis_gpio_0/m00_axis_aclk"
+        ]
+      },
+      "clk_wiz_0_clk_out2": {
+        "ports": [
+          "clk_wiz_0/clk_out2",
+          "ETH_REFCLK"
+        ]
+      },
+      "clk_wiz_0_locked": {
+        "ports": [
+          "clk_wiz_0/locked",
+          "proc_sys_reset_0/dcm_locked"
+        ]
+      },
+      "ext_reset_in_0_1": {
+        "ports": [
+          "RESET_N",
+          "proc_sys_reset_0/ext_reset_in"
+        ]
+      },
+      "proc_sys_reset_0_peripheral_aresetn": {
+        "ports": [
+          "proc_sys_reset_0/peripheral_aresetn",
+          "rmii_axis_0/m00_axis_aresetn",
+          "rmii_axis_0/s00_axis_aresetn",
+          "axis_gpio_0/s00_axis_aresetn",
+          "axis_gpio_0/m00_axis_aresetn"
+        ]
+      },
+      "reset_0_1": {
+        "ports": [
+          "reset",
+          "tempSens_0/reset"
+        ]
+      },
+      "rmii_axis_0_ETH_TXD": {
+        "ports": [
+          "rmii_axis_0/ETH_TXD",
+          "ETH_TXD"
+        ]
+      },
+      "rmii_axis_0_ETH_TXEN": {
+        "ports": [
+          "rmii_axis_0/ETH_TXEN",
+          "ETH_TXEN"
+        ]
+      },
+      "tempSens_0_TMP_SCL": {
+        "ports": [
+          "tempSens_0/TMP_SCL",
+          "TMP_SCL"
+        ]
+      },
+      "tempSens_0_w_data": {
+        "ports": [
+          "tempSens_0/w_data",
+          "axis_gpio_0/SW"
+        ]
+      }
+    }
+  }
+}
